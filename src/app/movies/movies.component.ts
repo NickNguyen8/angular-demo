@@ -9,18 +9,17 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
+
   constructor(private movieService: MovieService) { }
 
-  movie: Movie = {
-    id: 1,
-    name: 'Star Wars',
-    releaseYear: 1977
-  };
+  // movie: Movie = {
+  //   id: 1,
+  //   name: 'Star Wars',
+  //   releaseYear: 1977
+  // };
 
   // movies = fakeMovies;
   movies: Movie[];
-
-  selectedMovie: Movie;
 
   getMoviesFromServices(): void {
     //  this.movies = this.movieService.getMovies();
@@ -30,9 +29,11 @@ export class MoviesComponent implements OnInit {
   ngOnInit() {
     this.getMoviesFromServices();
   }
-  onSelect(movie: Movie): void {
-    this.selectedMovie = movie;
-    console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
-    // alert(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
-  }
+
+  // selectedMovie: Movie;
+  // onSelect(movie: Movie): void {
+  //   this.selectedMovie = movie;
+  //   console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
+  // alert(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
+  //}
 }

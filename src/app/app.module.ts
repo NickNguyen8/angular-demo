@@ -7,12 +7,14 @@ import { MoviesComponent } from './movies/movies.component';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieService } from './movie.service';
-
+import { MessageService } from './message.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { MovieService } from './movie.service';
     FormsModule
   ],
   providers: [
-    MovieService
+    MovieService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
