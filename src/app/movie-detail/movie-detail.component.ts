@@ -30,7 +30,10 @@ export class MovieDetailComponent implements OnInit {
     // Call service to get movie from Id
     this.movieService.getMovieFromId(id).subscribe(movie => this.movie = movie);
   }
-
+  save(): boolean {
+    this.movieService.updateMovie(this.movie).subscribe(() => this.goBack());
+    return true;
+  }
   goBack(): void {
     this.location.back();
   }

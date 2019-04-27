@@ -10,6 +10,7 @@ import { MovieService } from './movie.service';
 import { MessageService } from './message.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MoviesComponent,
     MovieDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,
